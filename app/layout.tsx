@@ -31,7 +31,9 @@ export default function RootLayout({
 				<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
 					<ToastProvider />
 					<main className="overflow-hidden">
+					<Navbar />
 						{children}
+					<Footer />
 					</main>
 				</ThemeProvider>
 			</body>

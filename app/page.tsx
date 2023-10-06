@@ -4,8 +4,7 @@ import React from "react";
 import Features from "@/components/features";
 import MainBanner from "@/components/main-banner";
 import PricingList from "@/components/pricing-list";
-import Navbar from "@/components/navbar";
-import Footer from "@/components/footer";
+
 
 export default function Home() {
 	const prices = [
@@ -31,7 +30,7 @@ export default function Home() {
 
 	return (
 		<>
-            <Navbar />
+
 			<MainBanner />
 			<main className="container">
 				<div className="w-full flex-col items-center overflow-hidden mt-40">
@@ -45,7 +44,6 @@ export default function Home() {
 			</main>
 			<Features className="mt-20 mb-40"/>
 			<PricingList title="Branch your business with us." items={prices} />
-            <Footer />
 		</>
 	);
 }
