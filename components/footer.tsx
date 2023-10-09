@@ -3,7 +3,7 @@ import { Separator } from './ui/separator'
 
 const Footer = () => {
   return (
-    <footer className="w-full h-full bg-slate-800 p-20">
+    <footer className="w-full h-full bg-slate-800 text-white pt-20">
       <div className="container ">
         <div className="flex-row md:flex items-center justify-start">
             <h3 className="text-3xl text-white tracking-tight">Branches</h3>

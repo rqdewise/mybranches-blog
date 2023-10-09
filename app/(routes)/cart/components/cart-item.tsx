@@ -1,7 +1,7 @@
 
 import Image from "next/image";
 import { toast } from "react-hot-toast";
-import { X } from "lucide-react";
+import { Plus, Minus, X } from "lucide-react";
 
 import IconButton from "@/components/ui/icon-button";
 import Currency from "@/components/ui/currency";
@@ -23,6 +23,14 @@ const CartItem: React.FC<CartItemProps> = ({
     cart.removeItem(data.title);
   };
 
+  const addQ = () =>{
+    cart.addQuantity(data.title)
+  }
+
+  const deductQ = () =>{
+    cart.deductQuantity(data.title)
+  }
+
   return ( 
     <li className="flex py-6 border-b">
       <div className="relative ml-4 flex flex-1 flex-col justify-between sm:ml-6">
@@ -34,8 +42,15 @@ const CartItem: React.FC<CartItemProps> = ({
             <p className=" text-lg font-semibold text-black">
               {data.title} 
             </p>
+            <p className=" text-lg text-black flex justify-between space-x-3 mr-5">
+              <IconButton onClick={addQ} icon={<Plus size={10} />} /> 
+              
+              <span> {`Year:  ${data.year}`}</span>
+
+              <IconButton onClick={deductQ} icon={<Minus size={10} />} />
+            </p>
           </div>
-            <p className="text-black"><Currency value={data.price} /></p>
+            <p className="text-black"><Currency value={Number(data.price) * data.year} /></p>
         
         </div>
       </div>

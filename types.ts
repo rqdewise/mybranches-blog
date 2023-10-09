@@ -3,4 +3,5 @@ export interface Subcription{
     price: string,
     features: string[]
     isRecommended?: boolean,
+    year: number,
 }

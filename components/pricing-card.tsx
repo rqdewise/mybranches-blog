@@ -15,6 +15,7 @@ import { cn } from '@/lib/utils'
 import Currency from './ui/currency'
 import UseCart from '@/hooks/use-cart'
 import { Subcription } from '@/types'
+import { useRouter } from 'next/navigation'
 
 interface PricingCardProps{
     data: Subcription
@@ -25,10 +26,12 @@ const PricingCard: React.FC<PricingCardProps> = ({
 }) =>
 {
     const cart = UseCart();
+    const router = useRouter();
 
     const addToCart: MouseEventHandler<HTMLButtonElement> = (e)=>{
         e.stopPropagation();
-        cart.addItem(data)
+        cart.addItem(data);
+        router.push('/cart');
     }
 
   return (

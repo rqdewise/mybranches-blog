@@ -4,6 +4,7 @@ import { Metadata } from "next";
 
 import { ThemeProvider } from "@/providers/theme-provider";
 import  ToastProvider  from '@/providers/toast-provider'
+import ShadToastProvider from "@/providers/shad-toast-provider";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
@@ -35,6 +36,7 @@ export default function RootLayout({
 						{children}
 					<Footer />
 					</main>
+					<ShadToastProvider />
 				</ThemeProvider>
 			</body>
 		</html>
