@@ -26,7 +26,7 @@ const Summary = () => {
   // }, [searchParams, removeAll]);
 
   const totalPrice = items.reduce((total, item) => {
-    return total + (Number(item.price) * Number(item.year))
+    return total + (Number(item.price) * item.year)
   }, 0);
 
   const onCheckout = async () => {

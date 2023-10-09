@@ -43,7 +43,7 @@ const UseCart = create(
             const currentItems = get().items;
             const existingItem =  currentItems.find((item)=> item.title === title);
 
-            if(existingItem && existingItem.year > 1){
+            if(existingItem && existingItem.year >= 1){
 
                 currentItems.map((item)=>(
                     item.title === title ? item.year = item.year  - 1 : item
@@ -51,11 +51,8 @@ const UseCart = create(
 
                 set({items:[...currentItems]}) 
             }
-            if(existingItem && existingItem.year == 1){
 
-                currentItems.map((item)=>(
-                    item.title === title ? item.year = item.year  - 1 : item
-                ));
+            if(existingItem && existingItem.year == 0){
 
                 set({ items: [...get().items.filter((item) => item.title != title)]});
                 hotToast.success("Item removed from the cart");
