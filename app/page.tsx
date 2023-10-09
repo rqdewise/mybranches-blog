@@ -4,30 +4,32 @@ import React from "react";
 import Features from "@/components/features";
 import MainBanner from "@/components/main-banner";
 import PricingList from "@/components/pricing-list";
+import { Subcription } from "@/types"
 
 
 export default function Home() {
-	const prices = [
+
+	const prices: Subcription[] = [
         {
             title: 'Joiner',
             price: '0',
-            features: ['Free Sub Domain', 'One ECommerce Store', '5 Products','Free Payment Gateway Setup', 'limited bandwidth','SSL','Serverless Function', 'Ultra Fast'],
+            features: ['Free Sub Domain', 'One ECommerce Store', '5 Products','Free Payment Gateway Setup', 'limited bandwidth','SSL','Serverless Function', 'Ultra Fast',],
             isRecommended: false,
-            year:0,
+            year: 0,
         },
         {
             title: 'Start up',
             price: '989',
-            features: ['Everything in Joiner', '2 ECommerce Store', '20 Products','Personalize Payment Gateway Setup', 'moderate bandwidth','Customers Data Analytic'],
+            features: ['Everything in Joiner', '2 ECommerce Store', '20 Products','Personalize Payment Gateway Setup', 'moderate bandwidth','Customers Data Analytic',],
             isRecommended: true,
-            year:0,
+            year: 0,
         },
         {
             title: 'Tycoon',
             price: '1979',
-            features: ['Everything in Start up', '10 ECommerce Store', '100 Products', 'Unlimited bandwidth','More features of Customers Data','Business Email', 'Prioritize Support'],
+            features: ['Everything in Start up', '10 ECommerce Store', '100 Products', 'Unlimited bandwidth','More features of Customers Data','Business Email', 'Prioritize Support',],
             isRecommended: false,
-            year:0,
+            year: 0,
         },
     ];
 
@@ -46,7 +48,7 @@ export default function Home() {
 				</div>
 			</main>
 			<Features className="mt-20 mb-40"/>
-			<PricingList title="Branch your business with us." items={prices} />
+			<PricingList title='Branch your business with us.' items={ prices } />
 		</>
 	);
 }

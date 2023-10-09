@@ -1,5 +1,3 @@
-import React from 'react'
-
 import { Subcription } from '@/types'
 import PricingCard from './pricing-card'
 

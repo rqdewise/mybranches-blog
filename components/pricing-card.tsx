@@ -42,7 +42,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
                         {data.title}
                     </h3>
                     <CardTitle className={cn("text-center font-bold text-3xl", data.isRecommended ? " text-5xl": " ")}>
-                        <Currency value={data.price}/>                        
+                        <Currency value={data.price}/>                 
                         <span className="text-sm text-foreground/60 ml-2">
                             /month
                         </span>

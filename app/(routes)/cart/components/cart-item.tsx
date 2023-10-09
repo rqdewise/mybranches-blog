@@ -50,7 +50,7 @@ const CartItem: React.FC<CartItemProps> = ({
               <IconButton onClick={deductQ} icon={<Minus size={10} />} />
             </p>
           </div>
-            <p className="text-black"><Currency value={Number(data.price) * data.year} /></p>
+            <p className="text-black"><Currency value={Number(data.price) * Number(data.year)} /></p>
         
         </div>
       </div>
