@@ -79,6 +79,7 @@ const UseCart = create(
 
         removeAll: ()=> set({ items:[] }),
 
+        
     }), {
         name: "cart-storage",
         storage: createJSONStorage(()=> localStorage)
