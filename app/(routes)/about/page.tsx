@@ -8,7 +8,7 @@ const AboutPage = () => {
 			<div className="container flex items-center justify-center min-h-screen px-4 mx-auto">
 				<div className="flex w-full gap-8 mx-auto mt-32 sm:mt-0 lg:gap-16">
 					<Card>
-						<p className="text-white text-xl px-32 pt-32">
+						<p className="px-12 pt-12 text-white text-xl md:px-32 md:pt-32">
 							We enable retailers to sell anything, whenever and wherever they
 							choose, we provide a modern ecommerce platform that will make your
 							online business venture fast and easy. The best part is you can
@@ -17,7 +17,7 @@ const AboutPage = () => {
 							help business owners successfully expand their operations online.
 						</p>
 
-						<h3 className="text-2xl font-bold px-32 text-white pt-20 pb-32">
+						<h3 className="px-12  pt-10 text-2xl font-bold md:px-32 text-white md:pt-20 pb-32">
 							Take your business online, the right way!
 						</h3>
 					</Card>

@@ -32,14 +32,15 @@ export default function MainNav({className, ...props}:React.HTMLAttributes<HTMLE
 
 	return (
 		<nav 
-			className={cn("flex items-center space-x-4", className)}
+			className=""
+			{...props}
 		>
-			<ul className="flex items-center  justify-items-end gap-4">
+			<ul className={cn("items-center", className)}>
 			{navigation.map((item) => (
 				<Link
 					key={item.href}
 					href={item.href}
-					className={cn("text-md font-semibold duration-500 text-zinc-800 hover:text-zinc-300", item.active ? "text-black font-bold dark:text-white": "text-muted-foreground")}
+					className={cn("text-md font-semibold text-foreground/60 hover:text-foreground duration-500", item.active ? "text-black font-bold dark:text-white": "text-foreground/60")}
 				>
 					{item.slug}
 				</Link>

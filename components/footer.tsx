@@ -1,4 +1,6 @@
 import React from 'react'
+import Link from 'next/link'
+
 import { Separator } from './ui/separator'
 
 const Footer = () => {
@@ -9,8 +11,8 @@ const Footer = () => {
             <h3 className="text-3xl text-white tracking-tight">Branches</h3>
             <nav className="md:ml-10">
                 <ul className="flex-row mt-5 md:flex sm:space-x-3">
-                  <li> About </li>
-                  <li> Pricing </li>
+                  <li> <Link href="/about">About</Link> </li>
+                  <li> <Link href="/price">Pricing</Link></li>
                   <li> Terms & Condition </li>
                   <li> Privacy Policy </li>
                 </ul>
